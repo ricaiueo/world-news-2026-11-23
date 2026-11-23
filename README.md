@@ -4,13 +4,12 @@
 [![rank](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 [![reward](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 
-One image summarising the world news of Monday 23 November 2026.
+A broadsheet news poster summarising the world news of Monday 23 November 2026.
 
 `main.py` writes `entry.png` to the output directory. The image is rendered
 ahead of time and committed here, so the run uses only the standard library,
 touches no network, and writes the same bytes every time. Before writing, the
-program checks the committed file is a whole PNG within the competition's
-size caps.
+program checks the committed file is a whole PNG within the bounty's size caps.
 
 ## Run it
 
@@ -18,26 +17,42 @@ size caps.
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 -P -s main.py
 ```
 
-## What the image shows
+## The stories
 
-Headlines are drawn from reports published on 23 November 2026 by Al Jazeera,
-France 24 and CNBC. Where sources gave different figures for a still-developing
-story, the image describes the scale in words rather than fixing on a number.
+Every headline, figure and location is taken from a report published on
+23 November 2026. Where sources gave different figures for a still-developing
+toll, the figure is attributed to the source that published it.
 
-| Region | Story |
-| --- | --- |
-| Ukraine | Russian strikes kill at least 15 in the Kyiv region |
-| Gulf | Houthis strike a Saudi refinery as Hormuz attacks widen |
-| Markets | AI-bubble fears drag Asian stocks lower |
-| Turkey | Thousands rally in Istanbul over the media crackdown |
-| Indonesia | Dozens killed in a factory fire as the search goes on |
-| DR Congo | WHO urges peace as fighting reaches an Ebola-zone hospital |
-| Belgium | An anti-austerity strike shuts the country's airports |
+| # | Desk | Story | Source |
+| --- | --- | --- | --- |
+| 1 | War | Russian strikes kill at least 15 in the Kyiv region | France 24 |
+| 2 | Energy | Houthis hit Saudi refinery as Hormuz attacks widen | CNBC |
+| 3 | Markets | AI-bubble fears drag Asian stocks lower | Al Jazeera |
+| 4 | Technology | US widens Nvidia chip inquiry to Megaspeed | CNBC |
+| 5 | Climate | Britain digs new reservoirs against drought | France 24 |
+| 6 | Disaster | Factory fire toll climbs as search goes on | Al Jazeera |
+| 7 | Sport | New Zealand battle to 239-5 to draw first Test | France 24 |
+
+The three figures across the poster are 15 killed in the Kyiv region
+(France 24), Brent crude at $92.35 in early Asia trading (CNBC), and a 350%
+rise in attacks on medics in the occupied West Bank (Al Jazeera). The pull
+quote is the WHO on fighting near an Ebola-zone hospital in DR Congo
+(Al Jazeera).
+
+## Design
+
+Portrait broadsheet at 723x1024 — the bounty caps entries at 1024x1024 px, so
+the poster keeps 1200:1700 proportions at a legal size. It is drawn at 2x and
+downsampled so the type stays crisp. Newsprint paper, near-black ink and a
+single vermilion spot colour; Franklin Gothic Condensed for headlines and
+Georgia for body. The world map is a hand-encoded 5-degree land mask rendered
+as halftone dots, with numbered markers matching the numbered stories.
 
 ## Rebuilding the image
 
-`tools/render_entry.py` regenerates `entry.png`. It is a development tool only
-— it needs Pillow and local fonts, and the graded entry never runs it.
+`tools/render_poster.py` regenerates `entry.png`, with the land mask in
+`tools/worldmap.py`. Development tools only — they need Pillow and local
+fonts, and the graded entry never runs them.
 
 ---
 
