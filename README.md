@@ -4,8 +4,10 @@
 [![rank](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 [![reward](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 
-A printed-newspaper front page summarising the world news of Monday
-23 November 2026.
+A dense printed-newspaper front page summarising the world news of Monday
+23 November 2026: a six-figure numbers row, a region tally bar, seven lead
+stories with flat illustrations, a located map, six further reports and a
+24-hour UTC filing strip.
 
 `main.py` writes `entry.png` to the output directory. The image is rendered
 ahead of time and committed here, so the run uses only the standard library,
@@ -30,7 +32,7 @@ published it. The numbers on the map match the numbers beside the stories.
 | 1 | War | Russian strikes kill at least 15 in the Kyiv region | 15 killed | France 24 |
 | 2 | Energy | Houthis hit Saudi refinery as attacks widen | Brent $92.35 | CNBC |
 | 3 | Rights | Attacks on medics up 350%, group says | +350% | Al Jazeera |
-| 4 | Disaster | Factory fire: 24 recovered, search goes on | 24 recovered | Al Jazeera |
+| 4 | Disaster | Factory fire: 24 recovered at Cikande, Banten | 24 recovered | Al Jazeera |
 | 5 | Sport | New Zealand draw first Test at 239-5 | 239-5 | France 24 |
 | 6 | Security | Warsaw says Russia twice targeted a rapper | 2 plots | Al Jazeera |
 | 7 | Markets | AI-bubble fears drag Asian stocks lower | — | Al Jazeera |
