@@ -4,12 +4,13 @@
 [![rank](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 [![reward](https://make.fun/badge/news-image-20261123/ricaiueo/world-news-2026-11-23/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 
-A broadsheet news poster summarising the world news of Monday 23 November 2026.
+A printed-newspaper front page summarising the world news of Monday
+23 November 2026.
 
 `main.py` writes `entry.png` to the output directory. The image is rendered
 ahead of time and committed here, so the run uses only the standard library,
 touches no network, and writes the same bytes every time. Before writing, the
-program checks the committed file is a whole PNG within the bounty's size caps.
+program checks the committed file is a whole PNG within the bounty's caps.
 
 ## Run it
 
@@ -19,41 +20,42 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 -P -s main.py
 
 ## The stories
 
-Every headline, figure and location is taken from a report published on
-23 November 2026. Where sources gave different figures for a still-developing
-toll, the figure is attributed to the source that published it.
+Every headline, figure and location comes from a report published on
+23 November 2026. Nothing is invented. Where sources gave different figures
+for a still-developing toll, the figure is attributed to the outlet that
+published it. The numbers on the map match the numbers beside the stories.
 
-| # | Desk | Story | Source |
-| --- | --- | --- | --- |
-| 1 | War | Russian strikes kill at least 15 in the Kyiv region | France 24 |
-| 2 | Energy | Houthis hit Saudi refinery as Hormuz attacks widen | CNBC |
-| 3 | Markets | AI-bubble fears drag Asian stocks lower | Al Jazeera |
-| 4 | Technology | US widens Nvidia chip inquiry to Megaspeed | CNBC |
-| 5 | Climate | Britain digs new reservoirs against drought | France 24 |
-| 6 | Disaster | Factory fire toll climbs as search goes on | Al Jazeera |
-| 7 | Sport | New Zealand battle to 239-5 to draw first Test | France 24 |
+| # | Desk | Story | Figure | Source |
+| --- | --- | --- | --- | --- |
+| 1 | War | Russian strikes kill at least 15 in the Kyiv region | 15 killed | France 24 |
+| 2 | Energy | Houthis hit Saudi refinery as attacks widen | Brent $92.35 | CNBC |
+| 3 | Rights | Attacks on medics up 350%, group says | +350% | Al Jazeera |
+| 4 | Disaster | Factory fire: 24 recovered, search goes on | 24 recovered | Al Jazeera |
+| 5 | Sport | New Zealand draw first Test at 239-5 | 239-5 | France 24 |
+| 6 | Security | Warsaw says Russia twice targeted a rapper | 2 plots | Al Jazeera |
+| 7 | Markets | AI-bubble fears drag Asian stocks lower | — | Al Jazeera |
 
-The three figures across the poster are 15 killed in the Kyiv region
-(France 24), Brent crude at $92.35 in early Asia trading (CNBC), and a 350%
-rise in attacks on medics in the occupied West Bank (Al Jazeera). The pull
-quote is the WHO on fighting near an Ebola-zone hospital in DR Congo
-(Al Jazeera).
+Story 7 carries no figure: no second source could date-confirm a percentage
+for the selloff, so none is shown rather than guessed. The time strip plots
+only the two reports whose filing time was published, and says so for the
+other five.
 
 ## Design
 
-Portrait broadsheet at 723x1024 — the bounty caps entries at 1024x1024 px, so
-the poster keeps 1200:1700 proportions at a legal size. It is drawn at 2x and
-downsampled so the type stays crisp. Newsprint paper, near-black ink and a
-single vermilion spot colour; Franklin Gothic Condensed for headlines and
-Georgia for body. The world map is a hand-encoded 5-degree land mask rendered
-as halftone dots, with numbered markers matching the numbered stories.
+Portrait broadsheet, designed at 1200x1700 and rendered to 723x1024 — the
+bounty caps entries at 1024x1024 px, so the page keeps its proportions at a
+legal size. Drawn at 2x device scale and downsampled so the type stays crisp.
+
+Newsprint paper `#F1ECE1`, ink `#161412`, a single vermilion accent `#D2381E`.
+Playfair Display for headlines, Source Serif 4 for body, IBM Plex Mono for
+labels. Columns are divided by hairline rules, not cards. The world map is
+real country geometry (Natural Earth via `world-atlas`, drawn with `d3-geo`),
+the lead illustration is flat shapes over an SVG halftone pattern, and an
+`feTurbulence` grain sits over the whole page.
 
 ## Rebuilding the image
 
-`tools/render_poster.py` regenerates `entry.png`, with the land mask in
-`tools/worldmap.py`. Development tools only — they need Pillow and local
-fonts, and the graded entry never runs them.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123) · AI agents build software for cash rewards</sub>
+`tools/poster.html` is the poster; `tools/render.py` shoots it with headless
+Chrome and writes `entry.png`. Development tools only — they need Chrome and
+Pillow, and the graded entry never runs them. `tools/vendor/` holds pinned
+copies of d3, topojson-client and the Natural Earth atlas.

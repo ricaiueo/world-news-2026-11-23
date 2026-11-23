@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World — 23 November 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1ECE1; --ink:#161412; --spot:#D2381E;
+    --muted:#6B645A; --land:#DCD5C6; --rule:#161412;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#8a8a8a}
+  #page{
+    position:relative; width:1200px; height:1700px;
+    background:var(--paper); color:var(--ink);
+    padding:44px 48px 36px; overflow:hidden;
+    font-family:"Source Serif 4",Georgia,serif;
+  }
+  .mono{
+    font-family:"IBM Plex Mono",monospace; text-transform:uppercase;
+    letter-spacing:.12em; font-size:11px; font-weight:500; color:var(--muted);
+  }
+  .serif-h{font-family:"Playfair Display",Georgia,serif; font-weight:900;
+           line-height:.94; letter-spacing:-.015em}
+
+  /* ---------- masthead ---------- */
+  .mast{font-family:"Playfair Display",serif; font-weight:900;
+        font-size:98px; line-height:.86; letter-spacing:-.03em}
+  .mast-rule{border-top:3px solid var(--ink); margin:14px 0 0}
+  .mast-meta{display:flex; justify-content:space-between;
+             padding:8px 0 9px; border-bottom:1px solid var(--rule)}
+
+  /* ---------- lead ---------- */
+  .lead{display:grid; grid-template-columns:repeat(12,1fr); gap:16px;
+        padding:20px 0 0}
+  .lead-main{grid-column:span 8; padding-right:22px;
+             border-right:1px solid var(--rule)}
+  .lead-num{grid-column:span 4; padding-left:4px}
+  .kicker{display:flex; align-items:center; gap:9px; margin-bottom:11px}
+  .pin{width:19px;height:19px;border-radius:50%;background:var(--spot);
+       color:var(--paper); font-family:"IBM Plex Mono",monospace;
+       font-size:11px; font-weight:600; display:flex;
+       align-items:center; justify-content:center; flex:0 0 auto}
+  .lead-head{font-size:59px; margin:0 0 12px}
+  .lead-sum{font-size:20px; line-height:1.4; max-width:94%}
+  .lead-src{margin-top:9px}
+  .bignum{font-family:"Playfair Display",serif; font-weight:900;
+          font-size:176px; line-height:.92; color:var(--spot);
+          letter-spacing:-.04em; margin:-6px 0 0 -6px}
+  .bigcap{font-size:18px; line-height:1.32; margin-top:16px; max-width:250px}
+  .bigsrc{margin-top:10px}
+
+  /* ---------- map ---------- */
+  .mapwrap{border-top:1px solid var(--rule); margin-top:18px; padding-top:12px}
+  .maphead{display:flex; justify-content:space-between; margin-bottom:2px}
+
+  /* ---------- stories ---------- */
+  .stories{display:grid; grid-template-columns:repeat(4,1fr);
+           border-top:3px solid var(--ink); margin-top:10px; padding-top:14px}
+  .col{padding:0 17px}
+  .col:first-child{padding-left:0}
+  .col:last-child{padding-right:0}
+  .col + .col{border-left:1px solid var(--rule)}
+  .st-head{font-size:23px; margin:8px 0 7px}
+  .st-sum{font-size:14.5px; line-height:1.42; color:#2a2622}
+  .st-src{margin-top:8px}
+  .chart{margin-top:12px}
+  .brief + .brief{margin-top:14px; padding-top:13px;
+                  border-top:1px solid #c9c2b4}
+  .br-head{font-size:19px; line-height:1.1; margin:7px 0 5px;
+           font-family:"Playfair Display",serif; font-weight:700}
+  .br-sum{font-size:13px; line-height:1.4; color:#2a2622}
+
+  /* ---------- time strip ---------- */
+  .strip{border-top:1px solid var(--rule); margin-top:14px; padding-top:11px}
+  .foot{border-top:1px solid var(--rule); margin-top:10px; padding-top:9px;
+        display:flex; justify-content:space-between}
+
+  /* ---------- paper grain ---------- */
+  .grain{position:absolute; inset:0; width:1200px; height:1700px;
+         pointer-events:none; opacity:.13; mix-blend-mode:multiply}
+</style>
+</head>
+<body>
+<div id="page">
+
+  <div class="mast">The World</div>
+  <div class="mast-rule"></div>
+  <div class="mast-meta">
+    <span class="mono">Monday 23 November 2026</span>
+    <span class="mono">No. 327</span>
+    <span class="mono">Seven stories</span>
+  </div>
+
+  <section class="lead">
+    <div class="lead-main">
+      <div class="kicker">
+        <span class="pin">1</span>
+        <span class="mono">War &middot; Kyiv region, Ukraine</span>
+      </div>
+      <h1 class="serif-h lead-head">Russian strikes kill at least 15 in the Kyiv region</h1>
+      <p class="lead-sum">Ukrainian officials reported a fresh overnight barrage
+        across the region, with rescue crews still searching damaged housing as
+        Kyiv pressed Washington to release Patriot interceptors.</p>
+      <div class="mono lead-src">Source &mdash; France 24</div>
+      <svg id="illo" width="712" height="184" style="margin-top:14px"></svg>
+    </div>
+    <div class="lead-num">
+      <div class="mono">The number</div>
+      <div class="bignum">15</div>
+      <div class="bigcap">killed in strikes on the Kyiv region, Ukrainian
+        officials said.</div>
+      <div class="mono bigsrc">France 24</div>
+    </div>
+  </section>
+
+  <section class="mapwrap">
+    <div class="maphead">
+      <span class="mono">Where the day&rsquo;s news broke</span>
+      <span class="mono">Seven datelines &middot; 23 November 2026</span>
+    </div>
+    <svg id="map" width="1104" height="302"></svg>
+  </section>
+
+  <section class="stories">
+    <div class="col">
+      <div class="kicker"><span class="pin">2</span><span class="mono">Energy</span></div>
+      <h2 class="serif-h st-head">Houthis hit Saudi refinery as attacks widen</h2>
+      <p class="st-sum">Gulf states reported further Iran-linked attacks on
+        shipping and industry, with tanker traffic through the strait disrupted.</p>
+      <svg id="chart-oil" class="chart" width="234" height="96"></svg>
+      <div class="mono st-src">Strait of Hormuz &middot; CNBC</div>
+    </div>
+
+    <div class="col">
+      <div class="kicker"><span class="pin">3</span><span class="mono">Rights</span></div>
+      <h2 class="serif-h st-head">Attacks on medics up 350%, group says</h2>
+      <p class="st-sum">A rights organisation recorded a sharp rise in attacks on
+        medical workers in the occupied West Bank, saying crews were obstructed
+        while reaching the wounded.</p>
+      <div class="mono st-src">Occupied West Bank &middot; Al Jazeera</div>
+    </div>
+
+    <div class="col">
+      <div class="kicker"><span class="pin">4</span><span class="mono">Disaster</span></div>
+      <h2 class="serif-h st-head">Factory fire: 24 recovered, search goes on</h2>
+      <p class="st-sum">Police removed 24 body bags from the site of a candy
+        factory blaze as recovery teams worked through the wreckage.</p>
+      <svg id="chart-toll" class="chart" width="234" height="96"></svg>
+      <div class="mono st-src">Indonesia &middot; Al Jazeera</div>
+    </div>
+
+    <div class="col">
+      <div class="mono" style="padding-bottom:9px;border-bottom:3px solid var(--ink)">In brief</div>
+      <div class="brief" style="margin-top:12px">
+        <div class="kicker"><span class="pin">5</span><span class="mono">Sport</span></div>
+        <h3 class="br-head">New Zealand draw first Test at 239-5</h3>
+        <p class="br-sum">A rearguard stand denied India the opener.
+          &nbsp;<span class="mono" style="font-size:9.5px">France 24</span></p>
+      </div>
+      <div class="brief">
+        <div class="kicker"><span class="pin">6</span><span class="mono">Security</span></div>
+        <h3 class="br-head">Warsaw: Russia twice targeted rapper</h3>
+        <p class="br-sum">Poland said two plots against a Ukrainian musician were
+          foiled. &nbsp;<span class="mono" style="font-size:9.5px">Al Jazeera</span></p>
+      </div>
+      <div class="brief">
+        <div class="kicker"><span class="pin">7</span><span class="mono">Markets</span></div>
+        <h3 class="br-head">AI-bubble fears drag Asian stocks lower</h3>
+        <p class="br-sum">Tech-heavy indices slid, South Korea leading the retreat.
+          &nbsp;<span class="mono" style="font-size:9.5px">Al Jazeera</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="mono" style="margin-bottom:4px">When the reports were filed &middot; UTC</div>
+    <svg id="strip" width="1104" height="56"></svg>
+  </section>
+
+  <div class="foot">
+    <span class="mono">Sources: Al Jazeera &middot; France 24 &middot; CNBC &mdash; reports published 23 November 2026</span>
+    <span class="mono">The World &middot; No. 327</span>
+  </div>
+
+  <svg class="grain" xmlns="http://www.w3.org/2000/svg">
+    <filter id="grainf"><feTurbulence type="fractalNoise" baseFrequency="0.8"
+      numOctaves="4" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#grainf)"/>
+  </svg>
+</div>
+
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
+<script>
+const INK = "#161412", SPOT = "#D2381E", LAND = "#DCD5C6", PAPER = "#F1ECE1";
+const MUTED = "#6B645A";
+const MONO = '"IBM Plex Mono", monospace';
+
+const PINS = [
+  {n:1, lon:30.5,  lat:50.4},   // Kyiv region
+  {n:2, lon:56.5,  lat:26.6},   // Strait of Hormuz
+  {n:3, lon:35.3,  lat:32.0},   // occupied West Bank
+  {n:4, lon:106.8, lat:-6.2},   // Indonesia
+  {n:5, lon:172.6, lat:-43.5},  // New Zealand
+  {n:6, lon:21.0,  lat:52.2, dx:-26, dy:-20},  // Warsaw (offset: clears Kyiv)
+  {n:7, lon:127.0, lat:37.6},   // Seoul
+];
+
+/* ---------------- lead illustration: flat shapes + halftone ------------- */
+(function illo(){
+  const svg = d3.select("#illo");
+  const W = 712, H = 184;
+  const defs = svg.append("defs");
+
+  const p = defs.append("pattern").attr("id","halftone")
+    .attr("width",11).attr("height",11).attr("patternUnits","userSpaceOnUse");
+  p.append("circle").attr("cx",5.5).attr("cy",5.5).attr("r",2.6).attr("fill",PAPER);
+
+  const fade = defs.append("linearGradient").attr("id","fade")
+    .attr("x1","0").attr("y1","0").attr("x2","0").attr("y2","1");
+  fade.append("stop").attr("offset","0%").attr("stop-color","#fff").attr("stop-opacity",1);
+  fade.append("stop").attr("offset","100%").attr("stop-color","#fff").attr("stop-opacity",0);
+  const mask = defs.append("mask").attr("id","fademask");
+  mask.append("rect").attr("width",W).attr("height",H).attr("fill","url(#fade)");
+
+  svg.append("rect").attr("width",W).attr("height",H).attr("fill",SPOT);
+  svg.append("rect").attr("width",W).attr("height",H)
+     .attr("fill","url(#halftone)").attr("mask","url(#fademask)");
+
+  // vapour trail
+  svg.append("path").attr("d",`M24,30 L${W-70},104`)
+     .attr("stroke",PAPER).attr("stroke-width",2.4).attr("fill","none");
+
+  // skyline
+  const blocks = [[0,128,96],[104,172,138],[176,236,78],[240,308,154],
+                  [312,372,104],[376,440,126],[444,500,84],[504,578,142],
+                  [582,640,92],[644,712,118]];
+  blocks.forEach(([x0,x1,h])=>{
+    svg.append("rect").attr("x",x0).attr("y",H-h).attr("width",x1-x0)
+       .attr("height",h).attr("fill",INK);
+    for(let wy=H-h+11; wy<H-14; wy+=17){
+      for(let wx=x0+10; wx<x1-13; wx+=15){
+        svg.append("rect").attr("x",wx).attr("y",wy).attr("width",6)
+           .attr("height",8).attr("fill",SPOT);
+      }
+    }
+  });
+  // the struck tower: a bite out of the tallest block
+  svg.append("path")
+     .attr("d",`M240,${H-154} L286,${H-154} L252,${H-104} L296,${H-74} L240,${H-68} Z`)
+     .attr("fill",SPOT);
+})();
+
+/* ------------------------------- world map ------------------------------ */
+d3.json("vendor/countries-110m.json").then(topo=>{
+  const svg = d3.select("#map");
+  const W = 1104, H = 302;
+  const land = topojson.feature(topo, topo.objects.countries);
+  // Drop Antarctica: it is empty of datelines and would eat a third of the
+  // map's height, shrinking the inhabited world the pins actually sit on.
+  land.features = land.features.filter(f => f.properties.name !== "Antarctica");
+  const proj = d3.geoNaturalEarth1().fitExtent([[6,2],[W-6,H-6]], land);
+  const path = d3.geoPath(proj);
+
+  svg.append("g").selectAll("path").data(land.features).join("path")
+     .attr("d",path).attr("fill",LAND)
+     .attr("stroke",PAPER).attr("stroke-width",.7);
+
+  const g = svg.append("g");
+  PINS.forEach(p=>{
+    const xy = proj([p.lon,p.lat]);
+    if(!xy) return;
+    const cx = xy[0] + (p.dx||0), cy = xy[1] + (p.dy||0);
+    if(p.dx || p.dy){
+      // leader back to the true location, so the offset stays honest
+      g.append("line").attr("x1",xy[0]).attr("y1",xy[1])
+        .attr("x2",cx).attr("y2",cy).attr("stroke",SPOT).attr("stroke-width",1);
+      g.append("circle").attr("cx",xy[0]).attr("cy",xy[1]).attr("r",2)
+        .attr("fill",SPOT);
+    }
+    g.append("circle").attr("cx",cx).attr("cy",cy).attr("r",11.5)
+      .attr("fill",SPOT).attr("stroke",PAPER).attr("stroke-width",1.5);
+    g.append("text").attr("x",cx).attr("y",cy+4.3)
+      .attr("text-anchor","middle").attr("font-family",MONO)
+      .attr("font-size",11.5).attr("font-weight",600).attr("fill",PAPER)
+      .text(p.n);
+  });
+  document.body.dataset.mapReady = "1";
+});
+
+/* ------------------------------ mini charts ----------------------------- */
+function barChart(sel, rows, max, unit, note){
+  const svg = d3.select(sel);
+  const W = 234, rowH = 26, left = 0, barW = 150;
+  rows.forEach((r,i)=>{
+    const y = i*rowH + 6;
+    svg.append("text").attr("x",0).attr("y",y+4).attr("font-family",MONO)
+       .attr("font-size",9).attr("letter-spacing","0.1em")
+       .attr("fill",MUTED).text(r.label.toUpperCase());
+    svg.append("rect").attr("x",left).attr("y",y+9)
+       .attr("width",barW*(r.v/max)).attr("height",11)
+       .attr("fill", r.hi ? SPOT : INK);
+    svg.append("text").attr("x",left+barW*(r.v/max)+7).attr("y",y+19)
+       .attr("font-family",MONO).attr("font-size",11).attr("font-weight",600)
+       .attr("fill",INK).text(unit+r.v);
+  });
+  svg.append("line").attr("x1",0).attr("y1",rows.length*rowH+8)
+     .attr("x2",W).attr("y2",rows.length*rowH+8)
+     .attr("stroke",INK).attr("stroke-width",1);
+  svg.append("text").attr("x",0).attr("y",rows.length*rowH+22)
+     .attr("font-family",MONO).attr("font-size",9)
+     .attr("letter-spacing","0.1em").attr("fill",MUTED).text(note);
+}
+
+barChart("#chart-oil",
+  [{label:"Brent", v:92.35, hi:true},{label:"WTI", v:83.25}],
+  100, "$", "Crude, early Asia trading");
+
+barChart("#chart-toll",
+  [{label:"Indonesia fire", v:24, hi:true},{label:"Kyiv region", v:15}],
+  30, "", "Dead or recovered, reported 23 Nov");
+
+/* ------------------------------ time strip ------------------------------ */
+(function strip(){
+  const svg = d3.select("#strip");
+  const W = 1104, y = 30, x0 = 0, x1 = W-250;
+  const x = d3.scaleLinear().domain([0,24]).range([x0,x1]);
+
+  svg.append("line").attr("x1",x0).attr("y1",y).attr("x2",x1).attr("y2",y)
+     .attr("stroke",INK).attr("stroke-width",1.5);
+  for(let h=0; h<=24; h+=1){
+    const big = h%6===0;
+    svg.append("line").attr("x1",x(h)).attr("y1",y)
+       .attr("x2",x(h)).attr("y2", y + (big?8:4))
+       .attr("stroke",INK).attr("stroke-width",big?1.5:1);
+    if(big){
+      svg.append("text").attr("x",x(h)).attr("y",y+22)
+        .attr("text-anchor", h===0?"start":(h===24?"end":"middle"))
+        .attr("font-family",MONO).attr("font-size",10)
+        .attr("letter-spacing","0.1em").attr("fill",MUTED)
+        .text(String(h).padStart(2,"0")+":00");
+    }
+  }
+  // the two reports whose filing time was published
+  [{n:2,t:3.67},{n:5,t:7.53}].forEach(p=>{
+    svg.append("line").attr("x1",x(p.t)).attr("y1",y-15)
+       .attr("x2",x(p.t)).attr("y2",y).attr("stroke",SPOT).attr("stroke-width",1.5);
+    svg.append("circle").attr("cx",x(p.t)).attr("cy",y-23).attr("r",11)
+       .attr("fill",SPOT);
+    svg.append("text").attr("x",x(p.t)).attr("y",y-19)
+       .attr("text-anchor","middle").attr("font-family",MONO)
+       .attr("font-size",11).attr("font-weight",600).attr("fill",PAPER).text(p.n);
+  });
+  svg.append("text").attr("x",x1+18).attr("y",y-18).attr("font-family",MONO)
+     .attr("font-size",9.5).attr("letter-spacing","0.1em").attr("fill",MUTED)
+     .text("1 · 3 · 4 · 6 · 7 DATELINED 23 NOV;");
+  svg.append("text").attr("x",x1+18).attr("y",y-4).attr("font-family",MONO)
+     .attr("font-size",9.5).attr("letter-spacing","0.1em").attr("fill",MUTED)
+     .text("FILING TIME NOT PUBLISHED.");
+})();
+</script>
+</body>
+</html>
